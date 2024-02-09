@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(58.2deg, rgb(40, 92, 212) -3%, rgb(171, 53, 163) 49.3%, rgba(255, 205, 112, 0.999) 97.7%);
+    padding-top: 8rem;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 6rem;
+    background-color: white;
+    box-shadow: 0rem 0rem 1rem black;
+    text-align: center;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+
+.homeContainer {
+    height: 103vh;
+}
+
+.card {
+    background: #fffffffe;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+}
+
+.pokemon-image {
+    position: absolute;
+    top: 1.7rem;
+    height: 100%;
+    width: 33rem;
+    object-fit: contain;
+    transition: all .6s ease-in-out;
+    cursor: pointer;
+}
+
+.pokemon-image:hover {
+    transform: scale(1.1);
+}
+
+.pokemondata {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+.dataone {
+    display: flex;
+}
+
+.name {
+    position: absolute;
+    left: 3rem;
+    bottom: 25rem;
+    background-image: linear-gradient(90.1deg, rgba(70, 215, 234, 0.767) 0.2%, rgba(68, 36, 164, 1) 99.9%);
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.7rem;
+    transition: all .5s ease-in-out;
+}
+
+.btn {
+    position: absolute;
+    left: -13rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.detatwo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 8rem;
+    width: 19rem;
+    font-size: 2rem;
+    left: -10rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
+    color: white;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+}
+
+.detatwo div {
+    display: flex;
+    transition: all .8s ease-in-out;
+}
+
+.detatwo div p {
+    border: 0.3rem solid red;
+    border-radius: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-right: 4rem;
+}
+
+.datatwoimg {
+    height: 6rem;
+}
+
+.loadmore {
+    background-image: linear-gradient(90.1deg, rgba(70, 215, 234, 0.767) 0.2%, rgba(68, 36, 164, 1) 99.9%);
+    box-shadow: 1rem 1rem rgba(70, 215, 234, 0.767);
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.loadmore:hover {
+    box-shadow: 2rem 1rem rgba(70, 215, 234, 0.767);
+}
+
+.searchpoko {
+    height: 3rem;
+    width: 40rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 2px solid black;
+    padding: .5rem 2rem;
+    border-radius: 4rem;
+    transition: all .5s ease-in-out;
+}
+
+.homeContainer {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 25rem));
+    grid-auto-rows: minmax(27rem, 27rem);
+    grid-row-gap: 4.5rem;
+    grid-column-gap: 4rem;
+    justify-content: center;
+}
+
+@media(width<800px) {
+    .searchpoko {
+        height: 3rem;
+        width: 20rem;
+        font-size: 2rem;
+        font-weight: 600;
+        border: 2px solid black;
+        padding: .5rem;
+        margin-top: .3rem;
+    }
+}
+
+@media(width < 550px) {
+    .header h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media(width < 500px) {
+    .header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    body {
+        padding-top: 15rem;
+    }
+}
